@@ -51,3 +51,24 @@ Ex: This project is a SPA built with Angular to show users and their phone plans
 4. (Optional) Run tests:
     ```bash
     ng test
+
+## How to Run the Project (Second Option)
+
+### Prerequisites
+
+- Docker 
+
+### Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/vitorchane/whatsreal_mobile_angular
+   cd whatsreal_mobile_angular
+
+2. Build the Docker image:
+    ```bash
+    docker build -t my-angular-app .
+
+3. Run the container:
+    ```bash
+    docker run -p 4200:80 my-angular-app

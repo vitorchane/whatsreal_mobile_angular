@@ -53,7 +53,6 @@
                   "maximumError": "4kB"
                 }
               ],
-              "localize": ["en", "pt"],
               "outputHashing": "all"
             },
             "development": {
