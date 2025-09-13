@@ -28,7 +28,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
     ReactiveFormsModule,
   ],
   templateUrl: './action-bar.component.html',
-  styleUrls: ['./action-bar.component.scss'], // 🔹 Corrigido: era "styleUrl"
+  styleUrls: ['./action-bar.component.scss'],
 })
 export class ActionBarComponent {
   @Output() viewChange: EventEmitter<'list' | 'cards'> = new EventEmitter<'list' | 'cards'>();

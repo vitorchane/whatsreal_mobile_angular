@@ -20,9 +20,4 @@ export class HeaderComponent {
   logoPath = 'assets/icon/mitel.png';
   brazilLogoPath = 'assets/icon/brazil.png';
   canadaLogoPath = 'assets/icon/canada.png';
-
-  changeLang(lang: string) {
-    // redireciona para o build do idioma
-    window.location.href = '/' + lang + '/index.html';
-  }
 }

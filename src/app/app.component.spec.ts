@@ -9,7 +9,7 @@ describe('AppComponent', () => {
       imports: [
         AppComponent,
         HttpClientTestingModule,
-        NoopAnimationsModule // ❗ Adiciona isso para ignorar animações nos testes
+        NoopAnimationsModule
       ],
     }).compileComponents();
   });

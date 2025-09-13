@@ -1,11 +1,11 @@
 import { Component, inject, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 // Angular Material
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-
 
 // Components
 import { UserDetailComponent } from '../../user-detail/user-detail.component';
@@ -17,6 +17,7 @@ import { User } from '../../../../models/user.model';
   selector: 'app-user-card',
   standalone: true,
   imports: [
+    CommonModule,
     MatCardModule,
     MatChipsModule,
     MatDialogModule,

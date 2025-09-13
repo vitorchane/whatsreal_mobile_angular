@@ -9,7 +9,7 @@ module.exports = function (config) {
       require('@angular-devkit/build-angular/plugins/karma')
     ],
     client: {
-      clearContext: false // deixa o relatório no navegador
+      clearContext: false
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,

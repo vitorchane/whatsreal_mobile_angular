@@ -26,7 +26,7 @@ describe('UserService', () => {
     });
 
     afterEach(() => {
-        httpMock.verify(); // Verifica se não sobrou requisição pendente
+        httpMock.verify();
     });
 
     it('should fetch and parse users', (done) => {
@@ -40,7 +40,7 @@ describe('UserService', () => {
         const req = httpMock.expectOne('assets/data/db.json');
         expect(req.request.method).toBe('GET');
 
-        req.flush(mockRawJson); // Simula a resposta HTTP
+        req.flush(mockRawJson);
     });
 
     it('should return a user by ID', (done) => {
@@ -66,9 +66,14 @@ describe('UserService', () => {
     });
 
     it('should fix invalid JSON', () => {
-        const raw = `"name":"Alice" "email":"alice@example.com"`;
-        // @ts-ignore acessar método privado apenas para teste
-        const fixed = (service as any).fixJson(raw);
-        expect(fixed).toBe(`"name": "Alice", "email": "alice@example.com"`);
+        const raw = `{
+            "name":"Alice" "email":"alice@example.com"
+        }`;
+        
+        const fixedCommas = (service as any).fixJson(raw);
+
+        const parsed = JSON.parse(fixedCommas);
+        expect(parsed.name).toBe('Alice');
+        expect(parsed.email).toBe('alice@example.com');
     });
 });

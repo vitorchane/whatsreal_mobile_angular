@@ -57,6 +57,10 @@ export class LandingPageComponent {
       case 'plan':
         this.filteredUsers = [...this.users].sort((a, b) => a.plan.type.localeCompare(b.plan.type));
         break;
+
+      case 'status':
+        this.filteredUsers = [...this.users].sort((a, b) => a.plan.status.localeCompare(b.plan.status));
+        break;
       
       default:
         this.filteredUsers = this.users;
