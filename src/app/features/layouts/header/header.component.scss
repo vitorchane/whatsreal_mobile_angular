@@ -1,0 +1,23 @@
+mat-toolbar {
+  background-color: #007aff;
+  padding: 24px;
+
+  .logo {
+    width: 150px;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .flags {
+    button {
+      width: 32px;
+    }
+
+    .language-icon {
+      height: 28px;
+      width: 32px;
+    }
+  }
+}

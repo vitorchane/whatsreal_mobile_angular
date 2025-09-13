@@ -1,0 +1,12 @@
+<div class="content">
+    <app-action-bar
+        (viewChange)="onViewChange($event)"
+        (filterChange)="onFilterChange($event)"
+        (searchChange)="onSearchChange($event)"
+    ></app-action-bar>
+    
+    <app-user-list
+        [users]="filteredUsers"
+        [viewMode]="viewMode()"
+    ></app-user-list>
+</div>

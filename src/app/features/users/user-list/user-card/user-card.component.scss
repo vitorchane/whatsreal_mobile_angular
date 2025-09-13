@@ -1,0 +1,33 @@
+$user-blue-dark: #007aff;
+$user-blue-light: #00A1E0;
+$white: white;
+
+.user-card {
+    max-width: 300px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .card-footer {
+      padding: 16px;
+
+      // &.basic {
+      //   background-color: $user-blue-dark;
+      // }
+      
+      // &.lite {
+      //   background-color: $user-blue-light;
+      // }
+
+      // &.premium {
+      //   background-color: darken($user-blue-dark, 10%);
+      // }
+
+      // &.ultimate {
+      //   background-color: darken($user-blue-light, 10%);
+      // }
+    }
+}

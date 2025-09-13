@@ -1,0 +1,41 @@
+<mat-card appearance="outlined">
+  <mat-card-content>
+    <span >Choose your favorite view:</span>
+    <div class="views">
+      <button mat-stroked-button (click)="changeView('list')" >List View <mat-icon>list</mat-icon></button>
+      <button mat-stroked-button (click)="changeView('cards')" >Cards View <mat-icon>dashboard</mat-icon></button>
+    </div>
+
+    <span >Filters:</span>
+    <div class="filters">
+      <button mat-stroked-button (click)="applyFilter('nameAsc')" >Filter by Name ASC</button>
+      <button mat-stroked-button (click)="applyFilter('nameDesc')" >Filter by Name DESC</button>
+      <button mat-stroked-button (click)="applyFilter('ageAsc')" >Filter by age ASC</button>
+      <button mat-stroked-button (click)="applyFilter('ageDesc')" >Filter by age DESC</button>
+      <button mat-stroked-button (click)="applyFilter('plan')" >Filter by plan</button>
+    </div>
+    
+    <span>Search:</span>
+    <form class="search-form" (ngSubmit)="$event.preventDefault()">
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Search users</mat-label>
+        <input
+          matInput
+          placeholder="Type a name or email"
+          [formControl]="searchControl"
+          (input)="onSearchChange()"
+        >
+        @if(searchControl.value){
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="searchControl.setValue(''); onSearchChange()"
+            type="button"
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>{{ user.name }}</h2>
+
+<mat-dialog-content>
+  <div><strong>Id: </strong>{{ user.id }}</div>
+  <div><strong>E-mail: </strong>{{ user.email }}</div>
+  <div><strong>Age: </strong>{{ user.age }}</div>
+  <div><strong>Plan: </strong>{{user.plan.type}} - {{ user.plan.status}}</div>
+  <div><strong>Plan Description: </strong></div>{{ user.plan.description }}
+  <div>
+    <strong>Features:</strong>
+    <ul>
+      @if(user.plan.features.conferenceCalling) {
+        <li>Conference Calling</li>
+      }
+
+      @if(user.plan.features.callWaiting) {
+        <li>Call Waiting</li>
+      }
+
+      @if(user.plan.features.voicemail) {
+        <li>Voice mail</li>
+      }
+  </ul>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button matButton mat-dialog-close>Ok</button>
+</mat-dialog-actions>
