@@ -72,3 +72,11 @@ Ex: This project is a SPA built with Angular to show users and their phone plans
 3. Run the container:
     ```bash
     docker run -p 4200:80 my-angular-app
+
+4. Stop the container:
+    ```bash
+    docker stop $(docker ps -aq)
+
+5. Remove the container:
+    ```bash
+    docker rm $(docker ps -aq)
